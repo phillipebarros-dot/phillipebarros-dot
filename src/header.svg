@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-label="Phillipe Barros">
+  <defs>
+    <style>
+      /*FONTS*/
+      .t-big { font-family:'CP'; font-size:92px; letter-spacing:2px; }
+      .t-mono { font-family:'STM', Consolas, monospace; }
+      .t-tag { font-family:'CP'; font-size:17px; letter-spacing:3px; fill:#07080b; }
+      .chuva { animation: cai .9s linear infinite; }
+      .chuva2 { animation: cai 1.4s linear infinite; opacity:.5 }
+      @keyframes cai { from { transform: translate(0,-200px) } to { transform: translate(-40px,0) } }
+      .gl-c { animation: glc 6s steps(1) infinite; }
+      .gl-r { animation: glr 6s steps(1) infinite; }
+      @keyframes glc { 0%,91%,95%,100% { transform:translate(-3px,0) } 92% { transform:translate(-14px,-3px) } 93% { transform:translate(9px,2px) } 94% { transform:translate(-6px,0) } }
+      @keyframes glr { 0%,91%,95%,100% { transform:translate(3px,0) } 92% { transform:translate(12px,3px) } 93% { transform:translate(-10px,-2px) } 94% { transform:translate(5px,1px) } }
+      .pisca { animation: pisca 1.6s steps(1) infinite; }
+      @keyframes pisca { 50% { opacity:0 } }
+      .janela { animation: jan 7s steps(1) infinite; }
+      @keyframes jan { 0%,100% { opacity:1 } 40% { opacity:.25 } 70% { opacity:1 } }
+      .onda { animation: corre 4s linear infinite; }
+      @keyframes corre { to { transform: translateX(-200px) } }
+    </style>
+    <linearGradient id="ceu" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#05070b"/>
+      <stop offset=".55" stop-color="#0a1418"/>
+      <stop offset=".82" stop-color="#2a1608"/>
+      <stop offset="1" stop-color="#4a2208"/>
+    </linearGradient>
+    <radialGradient id="neblina" cx="78%" cy="88%" r="55%">
+      <stop offset="0" stop-color="#ff8a1e" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#ff8a1e" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="pingos" width="60" height="200" patternUnits="userSpaceOnUse">
+      <line x1="10" y1="0" x2="4" y2="26" stroke="#9fd8e8" stroke-opacity=".22" stroke-width="1"/>
+      <line x1="38" y1="70" x2="32" y2="96" stroke="#9fd8e8" stroke-opacity=".16" stroke-width="1"/>
+      <line x1="52" y1="140" x2="46" y2="166" stroke="#9fd8e8" stroke-opacity=".2" stroke-width="1"/>
+      <line x1="24" y1="120" x2="20" y2="138" stroke="#9fd8e8" stroke-opacity=".12" stroke-width="1"/>
+    </pattern>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#000" fill-opacity=".14"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="400" fill="url(#ceu)"/>
+  <rect width="1200" height="400" fill="url(#neblina)"/>
+
+  <!-- pirâmide da Tyrell, ao fundo -->
+  <g opacity=".55">
+    <polygon points="880,330 1010,150 1140,330" fill="#120c08"/>
+    <g fill="#ffb347" fill-opacity=".55">
+      <rect x="990" y="200" width="3" height="2"/><rect x="1006" y="186" width="3" height="2"/><rect x="1020" y="214" width="3" height="2"/>
+      <rect x="960" y="250" width="3" height="2"/><rect x="1046" y="262" width="3" height="2"/><rect x="1000" y="280" width="3" height="2"/>
+      <rect x="930" y="300" width="3" height="2"/><rect x="1080" y="296" width="3" height="2"/><rect x="1030" y="240" width="3" height="2"/>
+    </g>
+  </g>
+
+  <!-- cidade, camada de trás -->
+  <path d="M0 330 V250 H40 V230 H70 V260 H110 V210 H140 V240 H190 V200 H220 V255 H260 V235 H300 V270 H340 V220 H370 V250 H420 V240 H460 V280 H520 V245 H560 V265 H600 V230 H640 V275 H700 V250 H740 V285 H800 V260 H850 V300 H880 V330 Z" fill="#0b0e12"/>
+  <!-- cidade, camada da frente -->
+  <path d="M0 400 V300 H30 V270 H60 V310 H95 V255 H125 V320 H170 V285 H205 V300 H240 V250 H262 V230 H272 V250 H290 V310 H330 V290 H380 V320 H430 V280 H470 V300 H520 V315 H600 V290 H650 V320 H720 V300 H780 V330 H860 V305 H930 V335 H1000 V318 H1080 V340 H1150 V325 H1200 V400 Z" fill="#06080a"/>
+  <g class="janela">
+    <rect x="100" y="270" width="4" height="3" fill="#00f0ff" fill-opacity=".7"/><rect x="112" y="290" width="4" height="3" fill="#fcee0a" fill-opacity=".6"/>
+    <rect x="248" y="262" width="4" height="3" fill="#fcee0a" fill-opacity=".7"/><rect x="256" y="280" width="4" height="3" fill="#00f0ff" fill-opacity=".6"/>
+    <rect x="440" y="292" width="4" height="3" fill="#ff2a3d" fill-opacity=".6"/>
+  </g>
+  <g>
+    <rect x="70" y="282" width="4" height="3" fill="#fcee0a" fill-opacity=".5"/><rect x="180" y="296" width="4" height="3" fill="#00f0ff" fill-opacity=".5"/>
+    <rect x="340" y="300" width="4" height="3" fill="#fcee0a" fill-opacity=".45"/><rect x="620" y="300" width="4" height="3" fill="#00f0ff" fill-opacity=".5"/>
+    <rect x="700" y="310" width="4" height="3" fill="#fcee0a" fill-opacity=".45"/><rect x="960" y="345" width="4" height="3" fill="#00f0ff" fill-opacity=".45"/>
+  </g>
+
+  <!-- chuva -->
+  <g class="chuva"><rect x="-40" y="0" width="1280" height="600" fill="url(#pingos)"/></g>
+  <g class="chuva2"><rect x="-40" y="-100" width="1280" height="600" fill="url(#pingos)" transform="scale(1.4)"/></g>
+
+  <!-- HUD -->
+  <g fill="none" stroke="#00f0ff" stroke-opacity=".55" stroke-width="1.5">
+    <path d="M24 44 V24 H44"/><path d="M1156 24 H1176 V44"/><path d="M24 356 V376 H44"/><path d="M1176 356 V376 H1156"/>
+  </g>
+  <text x="56" y="40" class="t-mono" style="font-size:12px; fill:#5fa9b8; letter-spacing:2px">REGISTRO 56-BA  ::  SÃO PAULO, BR  ::  2026</text>
+  <text x="1144" y="40" text-anchor="end" class="t-mono" style="font-size:12px; fill:#5fa9b8; letter-spacing:2px">VOIGHT-KAMPFF  &gt;  HUMANO <tspan fill="#fcee0a">(PROVAVELMENTE)</tspan></text>
+
+  <!-- nome com glitch -->
+  <g transform="translate(70 190)">
+    <text class="t-big gl-c" fill="#00f0ff" fill-opacity=".75">PHILLIPE BARROS</text>
+    <text class="t-big gl-r" fill="#ff2a3d" fill-opacity=".75">PHILLIPE BARROS</text>
+    <text class="t-big" fill="#f3f1ea">PHILLIPE BARROS</text>
+  </g>
+
+  <!-- etiqueta amarela -->
+  <g transform="translate(72 222)">
+    <polygon points="0,0 262,0 278,16 278,38 0,38" fill="#fcee0a"/>
+    <text x="16" y="26" class="t-tag">ACORDA, SAMURAI.</text>
+    <rect x="288" y="0" width="6" height="38" fill="#fcee0a" fill-opacity=".5"/>
+    <rect x="300" y="0" width="3" height="38" fill="#fcee0a" fill-opacity=".25"/>
+    <text x="320" y="25" class="t-mono" style="font-size:15px; fill:#9fd8e8; letter-spacing:1px">temos uma cidade pra queimar<tspan class="pisca" fill="#fcee0a">_</tspan></text>
+  </g>
+  <!-- Matrix -->
+  <text x="56" y="369" class="t-mono" style="font-size:12px; fill:#00c853; letter-spacing:3px">SIGA O COELHO BRANCO.<tspan class="pisca" fill="#00ff66"> _</tspan></text>
+
+  <rect width="1200" height="400" fill="url(#scan)"/>
+</svg>
