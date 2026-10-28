@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" role="img" aria-label="Asimov — As Leis da Robótica">
+  <defs>
+    <style>
+      /*FONTS*/
+      .t{font-family:'STM',Consolas,monospace}
+      .cp{font-family:'CP',sans-serif}
+
+      /* CRT flicker */
+      .scn{animation:scnF 8s ease-in-out infinite}
+      @keyframes scnF{0%,100%{opacity:.12}50%{opacity:.18}}
+
+      /* cursor blink */
+      .cur{animation:blink 1s steps(1) infinite}
+      @keyframes blink{50%{opacity:0}}
+
+      /* subtle glow */
+      .glow{filter:url(#g)}
+    </style>
+    <filter id="g" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="wbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1b26"/><stop offset="1" stop-color="#12131e"/>
+    </linearGradient>
+    <pattern id="sl" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="2" fill="#000" fill-opacity=".12"/>
+    </pattern>
+  </defs>
+
+  <!-- Window frame -->
+  <rect width="900" height="520" rx="8" fill="url(#wbg)"/>
+
+  <!-- Title bar -->
+  <rect width="900" height="36" rx="8" fill="#0f1019"/>
+  <rect y="28" width="900" height="8" fill="#0f1019"/>
+  <!-- Window buttons -->
+  <circle cx="20" cy="18" r="6" fill="#ff5f57"/>
+  <circle cx="40" cy="18" r="6" fill="#febc2e"/>
+  <circle cx="60" cy="18" r="6" fill="#28c840"/>
+  <!-- Tab -->
+  <rect x="80" y="6" width="260" height="24" rx="4" fill="#1a1b26"/>
+  <text x="95" y="23" class="t" fill="#787c99" style="font-size:11px">📁 asimov_leis.rs — ROBÓTICA</text>
+
+  <!-- Line numbers gutter -->
+  <rect x="0" y="36" width="44" height="484" fill="#13141f"/>
+
+  <!-- Line numbers -->
+  <g class="t" fill="#3b3d52" style="font-size:12px">
+    <text x="14" y="64">1</text><text x="14" y="82">2</text><text x="14" y="100">3</text>
+    <text x="14" y="118">4</text><text x="14" y="136">5</text><text x="14" y="154">6</text>
+    <text x="14" y="172">7</text><text x="14" y="190">8</text><text x="14" y="208">9</text>
+    <text x="8" y="226">10</text><text x="8" y="244">11</text><text x="8" y="262">12</text>
+    <text x="8" y="280">13</text><text x="8" y="298">14</text><text x="8" y="316">15</text>
+    <text x="8" y="334">16</text><text x="8" y="352">17</text><text x="8" y="370">18</text>
+    <text x="8" y="388">19</text><text x="8" y="406">20</text><text x="8" y="424">21</text>
+    <text x="8" y="442">22</text><text x="8" y="460">23</text><text x="8" y="478">24</text>
+    <text x="8" y="496">25</text>
+  </g>
+
+  <!-- Code content -->
+  <g class="t glow" style="font-size:13px">
+    <!-- Comment header -->
+    <text x="56" y="64" fill="#565a7e">// ═══════════════════════════════════════════════════════</text>
+    <text x="56" y="82" fill="#565a7e">// ROBÓTICA :: As Leis Fundamentais</text>
+    <text x="56" y="100" fill="#565a7e">// Ref: Eu, Robô (1950) | Fundação (1951) | Cavernas de Aço (1954)</text>
+    <text x="56" y="118" fill="#565a7e">// ═══════════════════════════════════════════════════════</text>
+
+    <!-- Blank line 5 -->
+
+    <!-- Law 0 -->
+    <text x="56" y="154"><tspan fill="#c792ea">pub const </tspan><tspan fill="#ff0055">LEI_ZERO</tspan><tspan fill="#c0c0c0">: &amp;str = </tspan><tspan fill="#9ece6a">"Um robô não pode causar mal à humanidade</tspan></text>
+    <text x="56" y="172"><tspan fill="#9ece6a">    nem, por inação, permitir que a humanidade sofra algum mal."</tspan><tspan fill="#c0c0c0">;</tspan></text>
+
+    <!-- Blank line 8 -->
+
+    <!-- Law 1 -->
+    <text x="56" y="208"><tspan fill="#c792ea">pub const </tspan><tspan fill="#00f0ff">LEI_PRIMEIRA</tspan><tspan fill="#c0c0c0">: &amp;str = </tspan><tspan fill="#9ece6a">"Um robô não pode ferir um ser humano</tspan></text>
+    <text x="56" y="226"><tspan fill="#9ece6a">    nem, por inação, permitir que um ser humano sofra algum mal."</tspan><tspan fill="#c0c0c0">;</tspan></text>
+
+    <!-- Blank line 11 -->
+
+    <!-- Law 2 -->
+    <text x="56" y="262"><tspan fill="#c792ea">pub const </tspan><tspan fill="#00f0ff">LEI_SEGUNDA</tspan><tspan fill="#c0c0c0">: &amp;str = </tspan><tspan fill="#9ece6a">"Um robô deve obedecer às ordens dadas</tspan></text>
+    <text x="56" y="280"><tspan fill="#9ece6a">    por seres humanos, exceto nos casos em que tais ordens</tspan></text>
+    <text x="56" y="298"><tspan fill="#9ece6a">    entrem em conflito com a Primeira Lei."</tspan><tspan fill="#c0c0c0">;</tspan></text>
+
+    <!-- Blank line 15 -->
+
+    <!-- Law 3 -->
+    <text x="56" y="334"><tspan fill="#c792ea">pub const </tspan><tspan fill="#00f0ff">LEI_TERCEIRA</tspan><tspan fill="#c0c0c0">: &amp;str = </tspan><tspan fill="#9ece6a">"Um robô deve proteger sua própria existência,</tspan></text>
+    <text x="56" y="352"><tspan fill="#9ece6a">    desde que tal proteção não entre em conflito</tspan></text>
+    <text x="56" y="370"><tspan fill="#9ece6a">    com a Primeira ou a Segunda Lei."</tspan><tspan fill="#c0c0c0">;</tspan></text>
+
+    <!-- Blank line 19 -->
+
+    <!-- Footer comment -->
+    <text x="56" y="406" fill="#565a7e">// ───────────────────────────────────────────────────────</text>
+    <text x="56" y="424" fill="#565a7e">// "A violência é o último recurso dos incompetentes."</text>
+    <text x="56" y="442" fill="#565a7e">//                        — Salvor Hardin, Fundação</text>
+    <text x="56" y="460" fill="#565a7e">// ───────────────────────────────────────────────────────</text>
+
+    <!-- Cursor -->
+    <text x="56" y="496" fill="#00ff41" class="cur">▌</text>
+  </g>
+
+  <!-- Scanlines -->
+  <rect width="900" height="520" fill="url(#sl)" class="scn"/>
+</svg>
+

@@ -1,101 +1,299 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-label="Phillipe Barros">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480" role="img" aria-label="Phillipe Barros">
   <defs>
     <style>
       /*FONTS*/
-      .t-big { font-family:'CP'; font-size:92px; letter-spacing:2px; }
-      .t-mono { font-family:'STM', Consolas, monospace; }
-      .t-tag { font-family:'CP'; font-size:17px; letter-spacing:3px; fill:#07080b; }
-      .chuva { animation: cai .9s linear infinite; }
-      .chuva2 { animation: cai 1.4s linear infinite; opacity:.5 }
-      @keyframes cai { from { transform: translate(0,-200px) } to { transform: translate(-40px,0) } }
-      .gl-c { animation: glc 6s steps(1) infinite; }
-      .gl-r { animation: glr 6s steps(1) infinite; }
-      @keyframes glc { 0%,91%,95%,100% { transform:translate(-3px,0) } 92% { transform:translate(-14px,-3px) } 93% { transform:translate(9px,2px) } 94% { transform:translate(-6px,0) } }
-      @keyframes glr { 0%,91%,95%,100% { transform:translate(3px,0) } 92% { transform:translate(12px,3px) } 93% { transform:translate(-10px,-2px) } 94% { transform:translate(5px,1px) } }
-      .pisca { animation: pisca 1.6s steps(1) infinite; }
-      @keyframes pisca { 50% { opacity:0 } }
-      .janela { animation: jan 7s steps(1) infinite; }
-      @keyframes jan { 0%,100% { opacity:1 } 40% { opacity:.25 } 70% { opacity:1 } }
-      .onda { animation: corre 4s linear infinite; }
-      @keyframes corre { to { transform: translateX(-200px) } }
+      .nome{font-family:'CP';font-size:82px;letter-spacing:5px}
+      .m{font-family:'STM',Consolas,monospace}
+      .mx{font-family:'STM',Consolas,monospace;font-size:14px;fill:#00ff41}
+
+      /* ═══ EXTREME GLITCH — Cyberpunk Edgerunners style ═══ */
+      /* Chromatic aberration layers */
+      .g-cyan{animation:gcyan 3s steps(1) infinite}
+      .g-pink{animation:gpink 3s steps(1) infinite}
+      @keyframes gcyan{
+        0%,76%,100%{transform:translate(-3px,0);opacity:.55}
+        77%{transform:translate(-28px,-7px) skewX(-8deg);opacity:1}
+        78%{transform:translate(20px,5px) skewX(4deg);opacity:.3}
+        79%{transform:translate(-15px,0) skewX(-5deg);opacity:.85}
+        80%{transform:translate(10px,-3px);opacity:.6}
+        81%{transform:translate(-3px,0);opacity:.55}
+        90%{transform:translate(12px,4px) skewX(6deg);opacity:.9}
+        91%{transform:translate(-22px,-5px) skewX(-9deg);opacity:1}
+        92%{transform:translate(8px,2px);opacity:.5}
+        93%{transform:translate(-3px,0);opacity:.55}
+      }
+      @keyframes gpink{
+        0%,76%,100%{transform:translate(3px,0);opacity:.55}
+        77%{transform:translate(26px,6px) skewX(8deg);opacity:1}
+        78%{transform:translate(-18px,-4px) skewX(-4deg);opacity:.3}
+        79%{transform:translate(14px,0) skewX(5deg);opacity:.85}
+        80%{transform:translate(-9px,3px);opacity:.6}
+        81%{transform:translate(3px,0);opacity:.55}
+        90%{transform:translate(-10px,-4px) skewX(-6deg);opacity:.9}
+        91%{transform:translate(20px,5px) skewX(9deg);opacity:1}
+        92%{transform:translate(-7px,-2px);opacity:.5}
+        93%{transform:translate(3px,0);opacity:.55}
+      }
+
+      /* ═══ HORIZONTAL SLICE GLITCH (Edgerunners tear effect) ═══ */
+      .gs1{animation:gs1 3s steps(1) infinite}
+      .gs2{animation:gs2 3s steps(1) infinite}
+      .gs3{animation:gs3 3s steps(1) infinite}
+      .gs4{animation:gs4 3s steps(1) infinite}
+      .gs5{animation:gs5 3s steps(1) infinite}
+      @keyframes gs1{0%,76%,82%,100%{transform:translateX(0)}77%{transform:translateX(-35px)}78%{transform:translateX(22px)}79%{transform:translateX(-12px)}80%{transform:translateX(28px)}81%{transform:translateX(-6px)}}
+      @keyframes gs2{0%,76%,82%,100%{transform:translateX(0)}77%{transform:translateX(30px)}78%{transform:translateX(-25px)}79%{transform:translateX(18px)}80%{transform:translateX(-32px)}81%{transform:translateX(8px)}}
+      @keyframes gs3{0%,89%,94%,100%{transform:translateX(0)}90%{transform:translateX(-40px)}91%{transform:translateX(16px)}92%{transform:translateX(-20px)}93%{transform:translateX(34px)}}
+      @keyframes gs4{0%,89%,94%,100%{transform:translateX(0)}90%{transform:translateX(25px)}91%{transform:translateX(-30px)}92%{transform:translateX(14px)}93%{transform:translateX(-18px)}}
+      @keyframes gs5{0%,76%,82%,89%,94%,100%{transform:translateX(0)}77%{transform:translateX(20px)}78%{transform:translateX(-15px)}90%{transform:translateX(-28px)}91%{transform:translateX(22px)}}
+
+      /* ═══ FULL-WIDTH GLITCH BANDS ═══ */
+      .band1{animation:band1 3s steps(1) infinite}
+      .band2{animation:band2 3s steps(1) infinite}
+      .band3{animation:band3 3s steps(1) infinite}
+      @keyframes band1{0%,76%,82%,100%{opacity:0}77%{opacity:1;transform:translateX(-20px)}78%{opacity:1;transform:translateX(30px)}79%{opacity:1;transform:translateX(-10px)}80%{opacity:.8;transform:translateX(15px)}81%{opacity:.5;transform:translateX(-5px)}}
+      @keyframes band2{0%,89%,94%,100%{opacity:0}90%{opacity:1;transform:translateX(25px)}91%{opacity:1;transform:translateX(-35px)}92%{opacity:.8;transform:translateX(12px)}93%{opacity:.5;transform:translateX(-8px)}}
+      @keyframes band3{0%,76%,79%,89%,92%,100%{opacity:0}77%{opacity:.6;transform:translateX(-15px)}78%{opacity:.4;transform:translateX(20px)}90%{opacity:.7;transform:translateX(18px)}91%{opacity:.3;transform:translateX(-22px)}}
+
+      /* ═══ VHS TRACKING ═══ */
+      .vhs{animation:vhs 4s linear infinite}
+      @keyframes vhs{0%{transform:translateY(-50px);opacity:0}3%{opacity:.3}8%{opacity:.3}11%{opacity:0}100%{transform:translateY(530px);opacity:0}}
+
+      /* ═══ CODE RAIN ═══ */
+      .r1{animation:rain 3.5s linear infinite}
+      .r2{animation:rain 4.8s linear infinite}
+      .r3{animation:rain 2.9s linear infinite}
+      .r4{animation:rain 6s linear infinite}
+      @keyframes rain{0%{transform:translateY(-500px);opacity:0}3%{opacity:1}92%{opacity:1}100%{transform:translateY(500px);opacity:0}}
+
+      /* ═══ STATIC NOISE ═══ */
+      .nz1{animation:nz1 3s steps(1) infinite}
+      .nz2{animation:nz2 3s steps(1) infinite}
+      @keyframes nz1{0%,76%,82%,100%{opacity:0}77%{opacity:.2}78%{opacity:.15}79%{opacity:.25}80%{opacity:.1}81%{opacity:.18}}
+      @keyframes nz2{0%,89%,94%,100%{opacity:0}90%{opacity:.18}91%{opacity:.22}92%{opacity:.12}93%{opacity:.2}}
+
+      /* ═══ BLINK ═══ */
+      .bk{animation:bk 1s steps(1) infinite}
+      @keyframes bk{50%{opacity:0}}
+
+      /* ═══ TERMINAL FLICKER ═══ */
+      .flk{animation:flk 4s ease-in-out infinite}
+      @keyframes flk{0%,100%{opacity:.3}50%{opacity:.6}}
     </style>
-    <linearGradient id="ceu" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#05070b"/>
-      <stop offset=".55" stop-color="#0a1418"/>
-      <stop offset=".82" stop-color="#2a1608"/>
-      <stop offset="1" stop-color="#4a2208"/>
+
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000800"/><stop offset=".5" stop-color="#000a02"/>
+      <stop offset="1" stop-color="#000600"/>
     </linearGradient>
-    <radialGradient id="neblina" cx="78%" cy="88%" r="55%">
-      <stop offset="0" stop-color="#ff8a1e" stop-opacity=".35"/>
-      <stop offset="1" stop-color="#ff8a1e" stop-opacity="0"/>
+    <radialGradient id="glow" cx="50%" cy="42%" r="45%">
+      <stop offset="0" stop-color="#00ff41" stop-opacity=".04"/>
+      <stop offset="1" stop-color="#00ff41" stop-opacity="0"/>
     </radialGradient>
-    <pattern id="pingos" width="60" height="200" patternUnits="userSpaceOnUse">
-      <line x1="10" y1="0" x2="4" y2="26" stroke="#9fd8e8" stroke-opacity=".22" stroke-width="1"/>
-      <line x1="38" y1="70" x2="32" y2="96" stroke="#9fd8e8" stroke-opacity=".16" stroke-width="1"/>
-      <line x1="52" y1="140" x2="46" y2="166" stroke="#9fd8e8" stroke-opacity=".2" stroke-width="1"/>
-      <line x1="24" y1="120" x2="20" y2="138" stroke="#9fd8e8" stroke-opacity=".12" stroke-width="1"/>
+    <pattern id="sl" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="2" fill="#000" fill-opacity=".15"/>
     </pattern>
-    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
-      <rect width="4" height="1" fill="#000" fill-opacity=".14"/>
-    </pattern>
+    <filter id="gl" x="-15%" y="-25%" width="130%" height="150%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Clip paths for horizontal slice glitch -->
+    <clipPath id="s1"><rect x="-700" y="-75" width="1400" height="14"/></clipPath>
+    <clipPath id="s2"><rect x="-700" y="-61" width="1400" height="14"/></clipPath>
+    <clipPath id="s3"><rect x="-700" y="-47" width="1400" height="14"/></clipPath>
+    <clipPath id="s4"><rect x="-700" y="-33" width="1400" height="14"/></clipPath>
+    <clipPath id="s5"><rect x="-700" y="-19" width="1400" height="14"/></clipPath>
+
+    <!-- Reusable name group -->
+    <g id="nfull">
+      <text class="nome g-cyan" fill="#00f0ff" filter="url(#gl)">PHILLIPE BARROS</text>
+      <text class="nome g-pink" fill="#ff0055" filter="url(#gl)">PHILLIPE BARROS</text>
+      <text class="nome" fill="#e0ffe0">PHILLIPE BARROS</text>
+    </g>
   </defs>
 
-  <rect width="1200" height="400" fill="url(#ceu)"/>
-  <rect width="1200" height="400" fill="url(#neblina)"/>
+  <!-- ═══ BACKGROUND ═══ -->
+  <rect width="1200" height="480" fill="url(#bg)"/>
+  <rect width="1200" height="480" fill="url(#glow)"/>
 
-  <!-- pirâmide da Tyrell, ao fundo -->
-  <g opacity=".55">
-    <polygon points="880,330 1010,150 1140,330" fill="#120c08"/>
-    <g fill="#ffb347" fill-opacity=".55">
-      <rect x="990" y="200" width="3" height="2"/><rect x="1006" y="186" width="3" height="2"/><rect x="1020" y="214" width="3" height="2"/>
-      <rect x="960" y="250" width="3" height="2"/><rect x="1046" y="262" width="3" height="2"/><rect x="1000" y="280" width="3" height="2"/>
-      <rect x="930" y="300" width="3" height="2"/><rect x="1080" y="296" width="3" height="2"/><rect x="1030" y="240" width="3" height="2"/>
-    </g>
+  <!-- ═══ CODE RAIN — heavy, 14 columns ═══ -->
+  <!-- Col 1 -->
+  <g class="r1" style="animation-delay:0s" opacity=".55">
+    <text class="mx" x="28" y="0" opacity=".3">ネ</text><text class="mx" x="28" y="18" opacity=".35">7</text>
+    <text class="mx" x="28" y="36" opacity=".4">ア</text><text class="mx" x="28" y="54" opacity=".45">0</text>
+    <text class="mx" x="28" y="72" opacity=".5">ク</text><text class="mx" x="28" y="90" opacity=".55">F</text>
+    <text class="mx" x="28" y="108" opacity=".6">マ</text><text class="mx" x="28" y="126" opacity=".7">3</text>
+    <text class="mx" x="28" y="144" opacity=".8">ト</text>
+    <text class="mx" x="28" y="162" fill="#e0ffe0" opacity="1">9</text>
+  </g>
+  <!-- Col 2 -->
+  <g class="r2" style="animation-delay:-1.4s" opacity=".45">
+    <text class="mx" x="105" y="0" opacity=".3">タ</text><text class="mx" x="105" y="18" opacity=".35">2</text>
+    <text class="mx" x="105" y="36" opacity=".4">ヨ</text><text class="mx" x="105" y="54" opacity=".5">B</text>
+    <text class="mx" x="105" y="72" opacity=".55">サ</text><text class="mx" x="105" y="90" opacity=".6">4</text>
+    <text class="mx" x="105" y="108" opacity=".7">ウ</text><text class="mx" x="105" y="126" opacity=".8">シ</text>
+    <text class="mx" x="105" y="144" fill="#e0ffe0" opacity="1">1</text>
+  </g>
+  <!-- Col 3 -->
+  <g class="r3" style="animation-delay:-2.1s" opacity=".5">
+    <text class="mx" x="190" y="0" opacity=".3">E</text><text class="mx" x="190" y="18" opacity=".4">リ</text>
+    <text class="mx" x="190" y="36" opacity=".45">6</text><text class="mx" x="190" y="54" opacity=".5">ノ</text>
+    <text class="mx" x="190" y="72" opacity=".6">8</text><text class="mx" x="190" y="90" opacity=".7">ケ</text>
+    <text class="mx" x="190" y="108" opacity=".8">ハ</text>
+    <text class="mx" x="190" y="126" fill="#e0ffe0" opacity="1">D</text>
+  </g>
+  <!-- Col 4 -->
+  <g class="r4" style="animation-delay:-.5s" opacity=".35">
+    <text class="mx" x="280" y="0" opacity=".3">5</text><text class="mx" x="280" y="18" opacity=".35">セ</text>
+    <text class="mx" x="280" y="36" opacity=".4">カ</text><text class="mx" x="280" y="54" opacity=".5">A</text>
+    <text class="mx" x="280" y="72" opacity=".55">ミ</text><text class="mx" x="280" y="90" opacity=".65">ル</text>
+    <text class="mx" x="280" y="108" opacity=".75">3</text><text class="mx" x="280" y="126" opacity=".85">ワ</text>
+    <text class="mx" x="280" y="144" fill="#e0ffe0" opacity="1">テ</text>
+  </g>
+  <!-- Col 5 -->
+  <g class="r1" style="animation-delay:-3s" opacity=".4">
+    <text class="mx" x="370" y="0" opacity=".3">ニ</text><text class="mx" x="370" y="18" opacity=".4">C</text>
+    <text class="mx" x="370" y="36" opacity=".5">ヒ</text><text class="mx" x="370" y="54" opacity=".6">0</text>
+    <text class="mx" x="370" y="72" opacity=".7">ソ</text><text class="mx" x="370" y="90" opacity=".8">F</text>
+    <text class="mx" x="370" y="108" fill="#e0ffe0" opacity="1">レ</text>
+  </g>
+  <!-- Col 6 -->
+  <g class="r2" style="animation-delay:-3.8s" opacity=".5">
+    <text class="mx" x="460" y="0" opacity=".3">4</text><text class="mx" x="460" y="18" opacity=".4">ツ</text>
+    <text class="mx" x="460" y="36" opacity=".45">ヤ</text><text class="mx" x="460" y="54" opacity=".55">7</text>
+    <text class="mx" x="460" y="72" opacity=".65">コ</text><text class="mx" x="460" y="90" opacity=".75">ム</text>
+    <text class="mx" x="460" y="108" opacity=".85">2</text>
+    <text class="mx" x="460" y="126" fill="#e0ffe0" opacity="1">ナ</text>
+  </g>
+  <!-- Col 7 (center-left) -->
+  <g class="r3" style="animation-delay:-1s" opacity=".3">
+    <text class="mx" x="540" y="0" opacity=".35">ラ</text><text class="mx" x="540" y="18" opacity=".45">9</text>
+    <text class="mx" x="540" y="36" opacity=".55">キ</text><text class="mx" x="540" y="54" opacity=".65">ヘ</text>
+    <text class="mx" x="540" y="72" opacity=".75">B</text>
+    <text class="mx" x="540" y="90" fill="#e0ffe0" opacity="1">チ</text>
+  </g>
+  <!-- Col 8 (center-right) -->
+  <g class="r4" style="animation-delay:-4.2s" opacity=".3">
+    <text class="mx" x="650" y="0" opacity=".35">ユ</text><text class="mx" x="650" y="18" opacity=".45">1</text>
+    <text class="mx" x="650" y="36" opacity=".55">モ</text><text class="mx" x="650" y="54" opacity=".65">6</text>
+    <text class="mx" x="650" y="72" opacity=".75">ロ</text>
+    <text class="mx" x="650" y="90" fill="#e0ffe0" opacity="1">E</text>
+  </g>
+  <!-- Col 9 -->
+  <g class="r1" style="animation-delay:-2.6s" opacity=".5">
+    <text class="mx" x="740" y="0" opacity=".3">フ</text><text class="mx" x="740" y="18" opacity=".4">A</text>
+    <text class="mx" x="740" y="36" opacity=".5">ス</text><text class="mx" x="740" y="54" opacity=".6">3</text>
+    <text class="mx" x="740" y="72" opacity=".7">エ</text><text class="mx" x="740" y="90" opacity=".8">ホ</text>
+    <text class="mx" x="740" y="108" fill="#e0ffe0" opacity="1">8</text>
+  </g>
+  <!-- Col 10 -->
+  <g class="r2" style="animation-delay:-.3s" opacity=".45">
+    <text class="mx" x="835" y="0" opacity=".3">イ</text><text class="mx" x="835" y="18" opacity=".4">D</text>
+    <text class="mx" x="835" y="36" opacity=".45">オ</text><text class="mx" x="835" y="54" opacity=".55">5</text>
+    <text class="mx" x="835" y="72" opacity=".65">ン</text><text class="mx" x="835" y="90" opacity=".75">カ</text>
+    <text class="mx" x="835" y="108" opacity=".85">0</text>
+    <text class="mx" x="835" y="126" fill="#e0ffe0" opacity="1">メ</text>
+  </g>
+  <!-- Col 11 -->
+  <g class="r3" style="animation-delay:-1.7s" opacity=".5">
+    <text class="mx" x="930" y="0" opacity=".35">ゲ</text><text class="mx" x="930" y="18" opacity=".45">7</text>
+    <text class="mx" x="930" y="36" opacity=".55">パ</text><text class="mx" x="930" y="54" opacity=".65">C</text>
+    <text class="mx" x="930" y="72" opacity=".75">ド</text><text class="mx" x="930" y="90" opacity=".85">2</text>
+    <text class="mx" x="930" y="108" fill="#e0ffe0" opacity="1">ビ</text>
+  </g>
+  <!-- Col 12 -->
+  <g class="r4" style="animation-delay:-2.8s" opacity=".4">
+    <text class="mx" x="1015" y="0" opacity=".3">F</text><text class="mx" x="1015" y="18" opacity=".4">ボ</text>
+    <text class="mx" x="1015" y="36" opacity=".5">ギ</text><text class="mx" x="1015" y="54" opacity=".6">9</text>
+    <text class="mx" x="1015" y="72" opacity=".7">プ</text><text class="mx" x="1015" y="90" opacity=".8">ジ</text>
+    <text class="mx" x="1015" y="108" fill="#e0ffe0" opacity="1">4</text>
+  </g>
+  <!-- Col 13 -->
+  <g class="r1" style="animation-delay:-1.2s" opacity=".45">
+    <text class="mx" x="1100" y="0" opacity=".3">ズ</text><text class="mx" x="1100" y="18" opacity=".4">B</text>
+    <text class="mx" x="1100" y="36" opacity=".5">ベ</text><text class="mx" x="1100" y="54" opacity=".6">1</text>
+    <text class="mx" x="1100" y="72" opacity=".7">ペ</text><text class="mx" x="1100" y="90" opacity=".8">6</text>
+    <text class="mx" x="1100" y="108" fill="#e0ffe0" opacity="1">ゼ</text>
+  </g>
+  <!-- Col 14 -->
+  <g class="r2" style="animation-delay:-4.5s" opacity=".35">
+    <text class="mx" x="1170" y="0" opacity=".35">ポ</text><text class="mx" x="1170" y="18" opacity=".45">A</text>
+    <text class="mx" x="1170" y="36" opacity=".55">ゴ</text><text class="mx" x="1170" y="54" opacity=".65">3</text>
+    <text class="mx" x="1170" y="72" opacity=".75">デ</text>
+    <text class="mx" x="1170" y="90" fill="#e0ffe0" opacity="1">0</text>
   </g>
 
-  <!-- cidade, camada de trás -->
-  <path d="M0 330 V250 H40 V230 H70 V260 H110 V210 H140 V240 H190 V200 H220 V255 H260 V235 H300 V270 H340 V220 H370 V250 H420 V240 H460 V280 H520 V245 H560 V265 H600 V230 H640 V275 H700 V250 H740 V285 H800 V260 H850 V300 H880 V330 Z" fill="#0b0e12"/>
-  <!-- cidade, camada da frente -->
-  <path d="M0 400 V300 H30 V270 H60 V310 H95 V255 H125 V320 H170 V285 H205 V300 H240 V250 H262 V230 H272 V250 H290 V310 H330 V290 H380 V320 H430 V280 H470 V300 H520 V315 H600 V290 H650 V320 H720 V300 H780 V330 H860 V305 H930 V335 H1000 V318 H1080 V340 H1150 V325 H1200 V400 Z" fill="#06080a"/>
-  <g class="janela">
-    <rect x="100" y="270" width="4" height="3" fill="#00f0ff" fill-opacity=".7"/><rect x="112" y="290" width="4" height="3" fill="#fcee0a" fill-opacity=".6"/>
-    <rect x="248" y="262" width="4" height="3" fill="#fcee0a" fill-opacity=".7"/><rect x="256" y="280" width="4" height="3" fill="#00f0ff" fill-opacity=".6"/>
-    <rect x="440" y="292" width="4" height="3" fill="#ff2a3d" fill-opacity=".6"/>
+  <!-- ═══ HACKER / TERMINAL TEXT ═══ -->
+  <g class="m flk" style="font-size:10px;fill:#00aa33;letter-spacing:1px">
+    <text x="30" y="32" opacity=".35">&gt; root@zion:~# cat /dev/neural_link</text>
+    <text x="30" y="48" opacity=".25">&gt; 0x4F2A 0x7E91 0xC3D8 0x1B47 0xA0F6</text>
+    <text x="820" y="32" opacity=".3">192.168.1.1 :: TRACE ROUTE :: NODE_7</text>
+    <text x="820" y="48" opacity=".2">SYN → ACK → PSH → FIN :: port 443</text>
   </g>
-  <g>
-    <rect x="70" y="282" width="4" height="3" fill="#fcee0a" fill-opacity=".5"/><rect x="180" y="296" width="4" height="3" fill="#00f0ff" fill-opacity=".5"/>
-    <rect x="340" y="300" width="4" height="3" fill="#fcee0a" fill-opacity=".45"/><rect x="620" y="300" width="4" height="3" fill="#00f0ff" fill-opacity=".5"/>
-    <rect x="700" y="310" width="4" height="3" fill="#fcee0a" fill-opacity=".45"/><rect x="960" y="345" width="4" height="3" fill="#00f0ff" fill-opacity=".45"/>
+  <g class="m" style="font-size:9px;fill:#00aa33;letter-spacing:1px">
+    <text x="30" y="465" opacity=".25">ssh -L 8080:localhost:80 neo@construct.matrix</text>
+    <text x="700" y="465" opacity=".2">grep -r "white_rabbit" /opt/zion/logs/ | head -20</text>
   </g>
 
-  <!-- chuva -->
-  <g class="chuva"><rect x="-40" y="0" width="1280" height="600" fill="url(#pingos)"/></g>
-  <g class="chuva2"><rect x="-40" y="-100" width="1280" height="600" fill="url(#pingos)" transform="scale(1.4)"/></g>
-
-  <!-- HUD -->
-  <g fill="none" stroke="#00f0ff" stroke-opacity=".55" stroke-width="1.5">
-    <path d="M24 44 V24 H44"/><path d="M1156 24 H1176 V44"/><path d="M24 356 V376 H44"/><path d="M1176 356 V376 H1156"/>
+  <!-- ═══ STATIC NOISE BLOCKS ═══ -->
+  <g class="nz1">
+    <rect x="50" y="120" width="180" height="8" fill="#00ff41" fill-opacity=".08"/>
+    <rect x="400" y="300" width="120" height="5" fill="#ff0055" fill-opacity=".06"/>
+    <rect x="900" y="80" width="200" height="6" fill="#00f0ff" fill-opacity=".07"/>
+    <rect x="680" y="400" width="150" height="4" fill="#00ff41" fill-opacity=".05"/>
   </g>
-  <text x="56" y="40" class="t-mono" style="font-size:12px; fill:#5fa9b8; letter-spacing:2px">REGISTRO 56-BA  ::  SÃO PAULO, BR  ::  2026</text>
-  <text x="1144" y="40" text-anchor="end" class="t-mono" style="font-size:12px; fill:#5fa9b8; letter-spacing:2px">VOIGHT-KAMPFF  &gt;  HUMANO <tspan fill="#fcee0a">(PROVAVELMENTE)</tspan></text>
-
-  <!-- nome com glitch -->
-  <g transform="translate(70 190)">
-    <text class="t-big gl-c" fill="#00f0ff" fill-opacity=".75">PHILLIPE BARROS</text>
-    <text class="t-big gl-r" fill="#ff2a3d" fill-opacity=".75">PHILLIPE BARROS</text>
-    <text class="t-big" fill="#f3f1ea">PHILLIPE BARROS</text>
+  <g class="nz2">
+    <rect x="300" y="150" width="140" height="6" fill="#ff0055" fill-opacity=".07"/>
+    <rect x="750" y="340" width="180" height="5" fill="#00ff41" fill-opacity=".06"/>
+    <rect x="100" y="380" width="160" height="7" fill="#00f0ff" fill-opacity=".05"/>
   </g>
 
-  <!-- etiqueta amarela -->
-  <g transform="translate(72 222)">
-    <polygon points="0,0 262,0 278,16 278,38 0,38" fill="#fcee0a"/>
-    <text x="16" y="26" class="t-tag">ACORDA, SAMURAI.</text>
-    <rect x="288" y="0" width="6" height="38" fill="#fcee0a" fill-opacity=".5"/>
-    <rect x="300" y="0" width="3" height="38" fill="#fcee0a" fill-opacity=".25"/>
-    <text x="320" y="25" class="t-mono" style="font-size:15px; fill:#9fd8e8; letter-spacing:1px">temos uma cidade pra queimar<tspan class="pisca" fill="#fcee0a">_</tspan></text>
+  <!-- ═══ FULL-WIDTH GLITCH BANDS ═══ -->
+  <g class="band1" opacity="0">
+    <rect x="0" y="175" width="1200" height="4" fill="#00f0ff" fill-opacity=".2"/>
+    <rect x="0" y="200" width="1200" height="3" fill="#ff0055" fill-opacity=".18"/>
+    <rect x="0" y="215" width="1200" height="5" fill="#00ff41" fill-opacity=".12"/>
+    <rect x="0" y="185" width="600" height="2" fill="#fff" fill-opacity=".08"/>
   </g>
-  <!-- Matrix -->
-  <text x="56" y="369" class="t-mono" style="font-size:12px; fill:#00c853; letter-spacing:3px">SIGA O COELHO BRANCO.<tspan class="pisca" fill="#00ff66"> _</tspan></text>
+  <g class="band2" opacity="0">
+    <rect x="0" y="190" width="1200" height="3" fill="#ff0055" fill-opacity=".22"/>
+    <rect x="0" y="208" width="1200" height="4" fill="#00f0ff" fill-opacity=".15"/>
+    <rect x="0" y="170" width="800" height="2" fill="#fff" fill-opacity=".06"/>
+  </g>
+  <g class="band3" opacity="0">
+    <rect x="0" y="195" width="1200" height="6" fill="#00ff41" fill-opacity=".1"/>
+    <rect x="200" y="180" width="800" height="3" fill="#ff0055" fill-opacity=".08"/>
+  </g>
 
-  <rect width="1200" height="400" fill="url(#scan)"/>
+  <!-- ═══ NAME — with horizontal slice glitch ═══ -->
+  <g transform="translate(600 210)" text-anchor="middle">
+    <!-- Base name (always visible) -->
+    <use href="#nfull"/>
+
+    <!-- Glitch slices — appear during tear moments -->
+    <g class="gs1" clip-path="url(#s1)"><use href="#nfull"/></g>
+    <g class="gs2" clip-path="url(#s2)"><use href="#nfull"/></g>
+    <g class="gs3" clip-path="url(#s3)"><use href="#nfull"/></g>
+    <g class="gs4" clip-path="url(#s4)"><use href="#nfull"/></g>
+    <g class="gs5" clip-path="url(#s5)"><use href="#nfull"/></g>
+  </g>
+
+  <!-- ═══ SUBTITLE ═══ -->
+  <text x="600" y="255" text-anchor="middle" class="m" style="font-size:12px;fill:#00ff41;letter-spacing:6px;opacity:.5">WAKE UP.</text>
+
+  <!-- ═══ VHS TRACKING LINES ═══ -->
+  <rect class="vhs" x="0" y="0" width="1200" height="3" fill="#fff" fill-opacity=".04"/>
+  <rect class="vhs" style="animation-delay:-1.5s" x="0" y="0" width="1200" height="2" fill="#00ff41" fill-opacity=".03"/>
+
+  <!-- ═══ HUD CORNERS ═══ -->
+  <g fill="none" stroke="#00ff41" stroke-opacity=".25" stroke-width="1.5">
+    <path d="M18 38 V18 H38"/><path d="M1162 18 H1182 V38"/>
+    <path d="M18 442 V462 H38"/><path d="M1182 442 V462 H1162"/>
+  </g>
+
+  <!-- ═══ BOTTOM TEXT ═══ -->
+  <text x="600" y="420" text-anchor="middle" class="m" style="font-size:10px;fill:#00cc44;letter-spacing:4px;opacity:.3">SIGA O COELHO BRANCO.<tspan class="bk" fill="#00ff66" opacity=".7"> ▌</tspan></text>
+
+  <!-- ═══ SCANLINES (heavier) ═══ -->
+  <rect width="1200" height="480" fill="url(#sl)"/>
 </svg>

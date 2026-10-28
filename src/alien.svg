@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" role="img" aria-label="ALIEN — MU/TH/UR 6000 Interface">
+  <defs>
+    <style>
+      /*FONTS*/
+      .t{font-family:'STM',Consolas,monospace}
+      .cp{font-family:'CP',sans-serif}
+
+      /* Amber CRT pulse */
+      .amp{animation:amp 3s ease-in-out infinite}
+      @keyframes amp{0%,100%{opacity:.85}50%{opacity:1}}
+
+      /* cursor blink */
+      .cur{animation:bk 1.2s steps(1) infinite}
+      @keyframes bk{50%{opacity:0}}
+
+      /* scan sweep */
+      .sweep{animation:sweep 6s linear infinite}
+      @keyframes sweep{0%{transform:translateY(-420px);opacity:0}5%{opacity:.15}10%{opacity:.15}15%{opacity:0}100%{transform:translateY(420px);opacity:0}}
+
+      /* text reveal — all visible, subtle flicker entrance */
+      .rv1,.rv2,.rv3,.rv4,.rv5,.rv6,.rv7,.rv8{opacity:1}
+    </style>
+    <radialGradient id="crt" cx="50%" cy="50%" r="65%">
+      <stop offset="0" stop-color="#0a1200" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".45"/>
+    </radialGradient>
+    <pattern id="sl" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="2" fill="#000" fill-opacity=".2"/>
+    </pattern>
+    <filter id="g" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- CRT Background -->
+  <rect width="900" height="400" fill="#020a00"/>
+
+  <!-- CRT corner vignette -->
+  <rect width="900" height="400" fill="url(#crt)"/>
+
+  <!-- Phosphor border -->
+  <rect x="12" y="12" width="876" height="376" rx="3" fill="none" stroke="#33aa00" stroke-opacity=".3" stroke-width="1.5"/>
+  <rect x="16" y="16" width="868" height="368" rx="2" fill="none" stroke="#33aa00" stroke-opacity=".15" stroke-width="0.5"/>
+
+  <!-- Header line -->
+  <g class="t amp" filter="url(#g)" style="font-size:11px">
+    <text x="30" y="42" fill="#33aa00" opacity=".5">╔══════════════════════════════════════════════════════════════════════════════╗</text>
+    <text x="30" y="58" fill="#33aa00" opacity=".5">║</text>
+    <text x="840" y="58" fill="#33aa00" opacity=".5">║</text>
+    <text x="30" y="374" fill="#33aa00" opacity=".5">╚══════════════════════════════════════════════════════════════════════════════╝</text>
+  </g>
+
+  <!-- WEYLAND-YUTANI CORP -->
+  <g class="t rv1" filter="url(#g)" opacity="0">
+    <text x="450" y="58" text-anchor="middle" fill="#55cc22" style="font-size:14px;letter-spacing:8px">WEYLAND-YUTANI CORPORATION</text>
+  </g>
+
+  <!-- MU/TH/UR header -->
+  <g class="t rv2" filter="url(#g)" opacity="0">
+    <text x="450" y="86" text-anchor="middle" fill="#44bb00" style="font-size:20px;letter-spacing:3px" class="amp">MU/TH/UR 6000</text>
+    <text x="450" y="104" text-anchor="middle" fill="#33aa00" style="font-size:10px;letter-spacing:5px" opacity=".6">INTERACTIVE COMPUTER SYSTEM v2.4.1</text>
+  </g>
+
+  <!-- Divider -->
+  <g class="t rv3" filter="url(#g)" opacity="0">
+    <text x="30" y="126" fill="#33aa00" style="font-size:11px" opacity=".4">────────────────────────────────────────────────────────────────────────────────</text>
+  </g>
+
+  <!-- Terminal output -->
+  <g class="t rv4" filter="url(#g)" opacity="0" style="font-size:13px">
+    <text x="40" y="152" fill="#55cc22">&gt; INTERFACE 2037 READY FOR INQUIRY</text>
+  </g>
+
+  <g class="t rv5" filter="url(#g)" opacity="0" style="font-size:13px">
+    <text x="40" y="178" fill="#33aa00">&gt; CREW STATUS ............ EXPENDABLE</text>
+    <text x="40" y="196" fill="#33aa00">&gt; PRIORITY ............... RETURN SPECIMEN</text>
+    <text x="40" y="214" fill="#33aa00">&gt; ALL OTHER PRIORITIES ... RESCINDED</text>
+  </g>
+
+  <!-- SPECIAL ORDER 937 -->
+  <g class="t rv6" filter="url(#g)" opacity="0" style="font-size:13px">
+    <text x="40" y="244" fill="#aaee44" opacity=".9">&gt; SPECIAL ORDER 937:</text>
+    <text x="40" y="262" fill="#88cc22" opacity=".8">&gt;   "Desviar para coordenadas recebidas."</text>
+    <text x="40" y="280" fill="#88cc22" opacity=".8">&gt;   "Investigar forma de vida."</text>
+    <text x="40" y="298" fill="#88cc22" opacity=".8">&gt;   "Prioridade: trazer organismo para análise."</text>
+    <text x="40" y="316" fill="#ff4444" opacity=".9">&gt;   "Tripulação prescindível."</text>
+  </g>
+
+  <!-- Bottom status -->
+  <g class="t rv7" filter="url(#g)" opacity="0" style="font-size:11px">
+    <text x="30" y="342" fill="#33aa00" opacity=".4">────────────────────────────────────────────────────────────────────────────────</text>
+    <text x="40" y="358" fill="#33aa00" opacity=".5">USCSS NOSTROMO  ·  REG 180924609  ·  TOWING REFINERY  ·  20 MILLION TONS</text>
+  </g>
+
+  <!-- Cursor prompt -->
+  <g class="t rv8" filter="url(#g)" opacity="0" style="font-size:13px">
+    <text x="700" y="358" fill="#55cc22" opacity=".7">RIPLEY&gt;<tspan class="cur" fill="#44ff00"> ▌</tspan></text>
+  </g>
+
+  <!-- Scan sweep line -->
+  <rect class="sweep" x="0" y="0" width="900" height="3" fill="#33ff00" fill-opacity=".1"/>
+
+  <!-- Heavy scanlines -->
+  <rect width="900" height="400" fill="url(#sl)"/>
+</svg>
