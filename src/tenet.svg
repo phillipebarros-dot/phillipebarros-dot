@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480" role="img" aria-label="TENET - Temporal Inversion Engine &amp; Sator Square">
+  <defs>
+    <style>
+      /*FONTS*/
+      .font-cyber { font-family: 'CP', 'Chakra Petch', 'Segoe UI', system-ui, sans-serif; font-weight: 700; }
+      .font-mono { font-family: 'STM', 'Share Tech Mono', 'JetBrains Mono', Consolas, monospace; }
+
+      .ttl-tenet { font-size: 38px; letter-spacing: 8px; font-weight: 700; }
+      .sub-tenet { font-size: 12px; letter-spacing: 3px; fill: #94a3b8; }
+      .quote-tenet { font-size: 16px; letter-spacing: 3px; fill: #f8fafc; }
+      .sator-cell { font-size: 26px; font-weight: 700; letter-spacing: 2px; }
+
+      .flux-red { animation: flux-r 3s linear infinite; }
+      @keyframes flux-r { 0% { transform: translateY(-40px); opacity: 0; } 50% { opacity: 0.8; } 100% { transform: translateY(400px); opacity: 0; } }
+
+      .flux-blue { animation: flux-b 3s linear infinite; }
+      @keyframes flux-b { 0% { transform: translateY(400px); opacity: 0; } 50% { opacity: 0.8; } 100% { transform: translateY(-40px); opacity: 0; } }
+
+      .pulse-red { animation: p-red 2.5s ease-in-out infinite; }
+      @keyframes p-red { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+
+      .pulse-blue { animation: p-blue 2.5s ease-in-out infinite; }
+      @keyframes p-blue { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+
+      .glow-center { animation: g-center 4s ease-in-out infinite; }
+      @keyframes g-center { 0%, 100% { filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.3)); } 50% { filter: drop-shadow(0 0 25px rgba(239, 68, 68, 0.4)); } }
+    </style>
+
+    <linearGradient id="tenet-bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#140608"/>
+      <stop offset="42%" stop-color="#07090f"/>
+      <stop offset="50%" stop-color="#0b0e14"/>
+      <stop offset="58%" stop-color="#07090f"/>
+      <stop offset="100%" stop-color="#06101c"/>
+    </linearGradient>
+
+    <linearGradient id="beam-red" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ef4444" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="beam-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00f0ff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="480" fill="url(#tenet-bg)"/>
+
+  <!-- Grid overlay -->
+  <g stroke="#1e293b" stroke-opacity="0.3" stroke-width="0.8">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="600" y1="0" x2="600" y2="480" stroke="#38bdf8" stroke-opacity="0.5" stroke-dasharray="4 6"/>
+  </g>
+
+  <!-- Flowing Particles / Entropy Streams -->
+  <!-- Red side: Forward Entropy (Falling Downward) -->
+  <g class="flux-red">
+    <circle cx="160" cy="0" r="2.5" fill="#ef4444"/>
+    <circle cx="280" cy="50" r="3" fill="#f87171"/>
+    <circle cx="420" cy="20" r="2" fill="#ef4444"/>
+    <circle cx="210" cy="120" r="3" fill="#fca5a5"/>
+    <line x1="320" y1="40" x2="320" y2="90" stroke="url(#beam-red)" stroke-width="2"/>
+    <line x1="180" y1="160" x2="180" y2="230" stroke="url(#beam-red)" stroke-width="2"/>
+  </g>
+
+  <!-- Blue side: Inverted Entropy (Rising Upward Against Time) -->
+  <g class="flux-blue">
+    <circle cx="780" cy="0" r="2" fill="#00f0ff"/>
+    <circle cx="920" cy="30" r="3.5" fill="#38bdf8"/>
+    <circle cx="1040" cy="80" r="2" fill="#60a5fa"/>
+    <circle cx="850" cy="140" r="3" fill="#00f0ff"/>
+    <line x1="880" y1="60" x2="880" y2="130" stroke="url(#beam-blue)" stroke-width="2"/>
+    <line x1="1020" y1="180" x2="1020" y2="260" stroke="url(#beam-blue)" stroke-width="2"/>
+  </g>
+
+  <!-- Top Header Bar -->
+  <g transform="translate(600, 42)" text-anchor="middle">
+    <text class="font-cyber ttl-tenet" fill="#f8fafc">T E N E T</text>
+    <text y="24" class="font-mono sub-tenet">TEMPORAL INVERSION ENGINE // PROTOCOLO DE FLUXO ENTROPICO BIDIRECIONAL</text>
+  </g>
+
+  <!-- LEFT CHAMBER: RED TEAM (FORWARD) -->
+  <g transform="translate(100, 110)">
+    <rect width="360" height="280" rx="4" fill="#18080a" fill-opacity="0.82" stroke="#7f1d1d" stroke-width="1.2"/>
+    <line x1="0" y1="0" x2="60" y2="0" stroke="#ef4444" stroke-width="3"/>
+    <circle cx="24" cy="28" r="4" fill="#ef4444" class="pulse-red"/>
+    <text x="36" y="32" class="font-mono" font-size="12" letter-spacing="2" fill="#ef4444">RED TEAM // FLUXO DIRETO</text>
+    <text x="24" y="66" class="font-cyber" font-size="20" fill="#f8fafc">ENTROPIA POSITIVA (t &gt; 0)</text>
+
+    <!-- Tactical Telemetry -->
+    <text x="24" y="104" class="font-mono" font-size="12" fill="#fca5a5"><tspan fill="#ef4444">&#9656;</tspan> Dire&#231;&#227;o: Tempo Linear Padr&#227;o (+10 min)</text>
+    <text x="24" y="130" class="font-mono" font-size="12" fill="#fca5a5"><tspan fill="#ef4444">&#9656;</tspan> Termodin&#226;mica: dS/dt &gt; 0 (Crescente)</text>
+    <text x="24" y="156" class="font-mono" font-size="12" fill="#fca5a5"><tspan fill="#ef4444">&#9656;</tspan> Causa precede o Efeito</text>
+    <text x="24" y="182" class="font-mono" font-size="12" fill="#fca5a5"><tspan fill="#ef4444">&#9656;</tspan> Pipeline: Ingestion &amp; Live Streaming</text>
+
+    <!-- Code Block -->
+    <rect x="20" y="208" width="320" height="52" rx="3" fill="#0c0405" stroke="#450a0a" stroke-width="1"/>
+    <text x="32" y="230" class="font-mono" font-size="11" fill="#ef4444">&gt; stream.forward(payload)</text>
+    <text x="32" y="248" class="font-mono" font-size="11" fill="#991b1b">&gt; timeline.advance(delta_t = +10)</text>
+  </g>
+
+  <!-- CENTER: THE SATOR SQUARE (5x5 PALINDROME) -->
+  <g transform="translate(600, 250)" class="glow-center">
+    <!-- Square Monolith Background -->
+    <rect x="-115" y="-135" width="230" height="270" rx="6" fill="#070910" fill-opacity="0.94" stroke="#334155" stroke-width="1.5"/>
+    <text x="0" y="-112" text-anchor="middle" class="font-mono" font-size="10" letter-spacing="3" fill="#94a3b8">ROTAS QUADRATUS</text>
+
+    <!-- SATOR Row 1 -->
+    <text x="-80" y="-72" class="font-mono sator-cell" fill="#ef4444">S</text>
+    <text x="-40" y="-72" class="font-mono sator-cell" fill="#e2e8f0">A</text>
+    <text x="0"   y="-72" class="font-mono sator-cell" fill="#e2e8f0">T</text>
+    <text x="40"  y="-72" class="font-mono sator-cell" fill="#e2e8f0">O</text>
+    <text x="80"  y="-72" class="font-mono sator-cell" fill="#00f0ff">R</text>
+
+    <!-- AREPO Row 2 -->
+    <text x="-80" y="-24" class="font-mono sator-cell" fill="#e2e8f0">A</text>
+    <text x="-40" y="-24" class="font-mono sator-cell" fill="#f87171">R</text>
+    <text x="0"   y="-24" class="font-mono sator-cell" fill="#e2e8f0">E</text>
+    <text x="40"  y="-24" class="font-mono sator-cell" fill="#38bdf8">P</text>
+    <text x="80"  y="-24" class="font-mono sator-cell" fill="#e2e8f0">O</text>
+
+    <!-- TENET Row 3 (Highlighted Palindrome Heart) -->
+    <rect x="-95" y="-1" width="190" height="34" rx="4" fill="#0f172a" stroke="#00f0ff" stroke-width="1.2"/>
+    <text x="-80" y="24" class="font-mono sator-cell" fill="#38bdf8">T</text>
+    <text x="-40" y="24" class="font-mono sator-cell" fill="#67e8f9">E</text>
+    <text x="0"   y="24" class="font-mono sator-cell" fill="#f8fafc" font-size="30">N</text>
+    <text x="40"  y="24" class="font-mono sator-cell" fill="#67e8f9">E</text>
+    <text x="80"  y="24" class="font-mono sator-cell" fill="#38bdf8">T</text>
+
+    <!-- OPERA Row 4 -->
+    <text x="-80" y="70" class="font-mono sator-cell" fill="#e2e8f0">O</text>
+    <text x="-40" y="70" class="font-mono sator-cell" fill="#f87171">P</text>
+    <text x="0"   y="70" class="font-mono sator-cell" fill="#e2e8f0">E</text>
+    <text x="40"  y="70" class="font-mono sator-cell" fill="#38bdf8">R</text>
+    <text x="80"  y="70" class="font-mono sator-cell" fill="#e2e8f0">A</text>
+
+    <!-- ROTAS Row 5 -->
+    <text x="-80" y="116" class="font-mono sator-cell" fill="#ef4444">R</text>
+    <text x="-40" y="116" class="font-mono sator-cell" fill="#e2e8f0">O</text>
+    <text x="0"   y="116" class="font-mono sator-cell" fill="#e2e8f0">T</text>
+    <text x="40"  y="116" class="font-mono sator-cell" fill="#e2e8f0">A</text>
+    <text x="80"  y="116" class="font-mono sator-cell" fill="#00f0ff">S</text>
+  </g>
+
+  <!-- RIGHT CHAMBER: BLUE TEAM (REVERSE) -->
+  <g transform="translate(740, 110)">
+    <rect width="360" height="280" rx="4" fill="#06121e" fill-opacity="0.82" stroke="#0369a1" stroke-width="1.2"/>
+    <line x1="300" y1="0" x2="360" y2="0" stroke="#00f0ff" stroke-width="3"/>
+    <circle cx="336" cy="28" r="4" fill="#00f0ff" class="pulse-blue"/>
+    <text x="324" y="32" text-anchor="end" class="font-mono" font-size="12" letter-spacing="2" fill="#00f0ff">BLUE TEAM // TEMPO REVERSO</text>
+    <text x="24" y="66" class="font-cyber" font-size="20" fill="#f8fafc">ENTROPIA INVERTIDA (t &lt; 0)</text>
+
+    <!-- Tactical Telemetry -->
+    <text x="24" y="104" class="font-mono" font-size="12" fill="#bae6fd"><tspan fill="#00f0ff">&#9656;</tspan> Dire&#231;&#227;o: Movimento Regressivo (-10 min)</text>
+    <text x="24" y="130" class="font-mono" font-size="12" fill="#bae6fd"><tspan fill="#00f0ff">&#9656;</tspan> Termodin&#226;mica: dS/dt &lt; 0 (Invertida)</text>
+    <text x="24" y="156" class="font-mono" font-size="12" fill="#bae6fd"><tspan fill="#00f0ff">&#9656;</tspan> O Efeito antecede a Causa</text>
+    <text x="24" y="182" class="font-mono" font-size="12" fill="#bae6fd"><tspan fill="#00f0ff">&#9656;</tspan> Pipeline: Rollback &amp; Speculative Sync</text>
+
+    <!-- Code Block -->
+    <rect x="20" y="208" width="320" height="52" rx="3" fill="#030c14" stroke="#0c4a6e" stroke-width="1"/>
+    <text x="32" y="230" class="font-mono" font-size="11" fill="#00f0ff">&gt; state.reconcile(reverse = True)</text>
+    <text x="32" y="248" class="font-mono" font-size="11" fill="#0284c7">&gt; timeline.invert(delta_t = -10)</text>
+  </g>
+
+  <!-- Bottom Nolan Quote & Philosophy -->
+  <g transform="translate(600, 448)" text-anchor="middle" class="font-mono">
+    <text class="quote-tenet">"N&#195;O TENTE ENTENDER. SINTA."</text>
+    <text y="20" font-size="11" letter-spacing="2.5" fill="#64748b">PIN&#199;A TEMPORAL // O QUE ACONTECEU, ACONTECEU. &#201; UMA EXPRESS&#195;O DE F&#201; NA MEC&#194;NICA DO MUNDO.</text>
+  </g>
+</svg>

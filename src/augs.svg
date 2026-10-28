@@ -1,83 +1,162 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-label="Aumentos: as stacks de Phillipe Barros">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 580" width="1200" height="580" role="img" aria-label="Deus Ex Machina - Systemic Augmentations &amp; Engineering Stack">
   <defs>
     <style>
       /*FONTS*/
-      .ttl { font-family:'CP'; font-size:40px; letter-spacing:6px; fill:#e7b04a; }
-      .sub { font-family:'STM', Consolas, monospace; font-size:13px; letter-spacing:3px; fill:#8a7340; }
-      .cod { font-family:'STM', Consolas, monospace; font-size:12px; letter-spacing:2px; fill:#e7b04a; }
-      .cat { font-family:'CP'; font-size:21px; letter-spacing:2px; fill:#f3f1ea; }
-      .it  { font-family:'STM', Consolas, monospace; font-size:15px; fill:#c9c3b3; }
-      .on  { animation: on 3s ease-in-out infinite; }
-      @keyframes on { 0%,100% { opacity:.35 } 50% { opacity:1 } }
-      .varre { animation: varre 5s linear infinite; }
-      @keyframes varre { from { transform: translateY(-80px) } to { transform: translateY(640px) } }
+      .font-cyber { font-family: 'CP', 'Chakra Petch', 'Segoe UI', system-ui, sans-serif; font-weight: 700; }
+      .font-cyber-mid { font-family: 'CPm', 'Chakra Petch', 'Segoe UI', system-ui, sans-serif; font-weight: 500; }
+      .font-mono { font-family: 'STM', 'Share Tech Mono', 'JetBrains Mono', Consolas, monospace; }
+
+      .ttl-dx { font-size: 34px; letter-spacing: 5px; fill: #e5a93c; }
+      .sub-dx { font-size: 12.5px; letter-spacing: 3px; fill: #a1824a; }
+      .badge-dx { font-size: 11px; letter-spacing: 2px; fill: #e5a93c; }
+
+      .aug-num { font-size: 11px; letter-spacing: 2.5px; fill: #e5a93c; }
+      .aug-cat { font-size: 18px; letter-spacing: 2px; fill: #f8fafc; font-weight: 700; }
+      .aug-sub { font-size: 11px; letter-spacing: 1.5px; fill: #94a3b8; }
+      .aug-item { font-size: 13.5px; letter-spacing: 1px; fill: #e2e8f0; }
+      .aug-status { font-size: 10px; letter-spacing: 2px; fill: #00f0ff; }
+
+      .pulse-gold { animation: p-gold 3s ease-in-out infinite; }
+      @keyframes p-gold { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+
+      .scan-gold { animation: s-gold 8s linear infinite; }
+      @keyframes s-gold { 0% { transform: translateY(-60px); } 100% { transform: translateY(620px); } }
+
+      .hex-glow { animation: h-glow 5s ease-in-out infinite; }
+      @keyframes h-glow { 0%, 100% { stroke-opacity: 0.12; } 50% { stroke-opacity: 0.28; } }
     </style>
-    <pattern id="hex" width="28" height="48.5" patternUnits="userSpaceOnUse" patternTransform="scale(1.2)">
-      <path d="M14 0 L28 8.08 V24.25 L14 32.33 L0 24.25 V8.08 Z M14 32.33 V48.5" fill="none" stroke="#e7b04a" stroke-opacity=".07" stroke-width="1"/>
-    </pattern>
-    <linearGradient id="feixe" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#e7b04a" stop-opacity="0"/>
-      <stop offset=".5" stop-color="#e7b04a" stop-opacity=".07"/>
-      <stop offset="1" stop-color="#e7b04a" stop-opacity="0"/>
+
+    <linearGradient id="dx-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#08080c"/>
+      <stop offset="60%" stop-color="#0d0e14"/>
+      <stop offset="100%" stop-color="#06070a"/>
     </linearGradient>
-    <symbol id="card" viewBox="0 0 270 214">
-      <polygon points="0,0 250,0 270,20 270,214 20,214 0,194" fill="#0e0d0b" stroke="#3a3122" stroke-width="1.5"/>
-      <polyline points="0,40 0,0 40,0" fill="none" stroke="#e7b04a" stroke-width="2"/>
-      <polyline points="270,174 270,214 230,214" fill="none" stroke="#e7b04a" stroke-width="2"/>
+
+    <!-- Deus Ex Carbon Hexagonal Lattice -->
+    <pattern id="hex-mesh" width="32" height="55.4" patternUnits="userSpaceOnUse" patternTransform="scale(1.1)">
+      <path d="M16 0 L32 9.24 V27.7 L16 36.94 L0 27.7 V9.24 Z M16 36.94 V55.4" fill="none" stroke="#e5a93c" class="hex-glow" stroke-width="0.9"/>
+    </pattern>
+
+    <linearGradient id="dx-feixe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e5a93c" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e5a93c" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#e5a93c" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Deus Ex Chamfered Card Component -->
+    <symbol id="dx-card" viewBox="0 0 356 195">
+      <polygon points="0,18 18,0 356,0 356,177 338,195 0,195" fill="#0b0c12" fill-opacity="0.88" stroke="#2a2318" stroke-width="1.2"/>
+      <!-- Top-Left Accent Notch -->
+      <polyline points="0,40 0,18 18,0 50,0" fill="none" stroke="#e5a93c" stroke-width="2.2"/>
+      <!-- Bottom-Right Accent Notch -->
+      <polyline points="356,155 356,177 338,195 306,195" fill="none" stroke="#e5a93c" stroke-width="2.2"/>
+      <!-- Internal grid accent -->
+      <line x1="20" y1="62" x2="336" y2="62" stroke="#1f232d" stroke-width="1"/>
     </symbol>
   </defs>
 
-  <rect width="1200" height="600" fill="#080807"/>
-  <rect width="1200" height="600" fill="url(#hex)"/>
-  <rect class="varre" x="0" y="0" width="1200" height="80" fill="url(#feixe)"/>
+  <!-- Background Canvas -->
+  <rect width="1200" height="580" fill="url(#dx-bg)"/>
+  <rect width="1200" height="580" fill="url(#hex-mesh)"/>
+  <rect class="scan-gold" width="1200" height="60" fill="url(#dx-feixe)"/>
 
-  <text x="40" y="64" class="ttl">AUMENTOS</text>
-  <text x="44" y="92" class="sub">SARIF INDUSTRIES  //  STATUS: INSTALADO  //  EU NUNCA PEDI POR ISSO</text>
-  <circle class="on" cx="1148" cy="54" r="5" fill="#e7b04a"/>
-  <text x="1134" y="59" text-anchor="end" class="sub" style="fill:#e7b04a">ATIVO</text>
-  <line x1="40" y1="110" x2="1160" y2="110" stroke="#3a3122"/>
+  <!-- Top Banner Section -->
+  <g transform="translate(44, 48)">
+    <!-- Iconic Deus Ex Geometric Triangle Motif -->
+    <polygon points="0,0 14,24 28,0" fill="#e5a93c" opacity="0.8"/>
+    <polygon points="28,0 42,24 56,0" fill="#e5a93c" opacity="0.45"/>
+    <polygon points="14,24 28,48 42,24" fill="#e5a93c" opacity="0.95"/>
+    
+    <text x="74" y="24" class="font-cyber ttl-dx">DEUS EX MACHINA</text>
+    <text x="76" y="44" class="font-mono sub-dx">SARIF DYNAMICS // MATRIZ DE AUMENTOS CIBERN&#201;TICOS // ARQUITETURA DE SISTEMAS</text>
 
-  <!-- linha 1 -->
-  <g transform="translate(40 132)">
-    <use href="#card" width="270" height="214"/>
-    <text x="22" y="34" class="cod">AUG-01</text><text x="22" y="62" class="cat">CÓRTEX</text>
-    <text x="22" y="98" class="it">TypeScript</text><text x="22" y="122" class="it">JavaScript</text><text x="22" y="146" class="it">Python</text><text x="22" y="170" class="it">Java</text><text x="22" y="194" class="it">SQL</text>
-  </g>
-  <g transform="translate(326 132)">
-    <use href="#card" width="270" height="214"/>
-    <text x="22" y="34" class="cod">AUG-02</text><text x="22" y="62" class="cat">ÓPTICA</text>
-    <text x="22" y="98" class="it">React</text><text x="22" y="122" class="it">Next.js</text><text x="22" y="146" class="it">Vite</text><text x="22" y="170" class="it">TailwindCSS</text>
-  </g>
-  <g transform="translate(612 132)">
-    <use href="#card" width="270" height="214"/>
-    <text x="22" y="34" class="cod">AUG-03</text><text x="22" y="62" class="cat">COLUNA</text>
-    <text x="22" y="98" class="it">FastAPI</text><text x="22" y="122" class="it">Spring Boot</text><text x="22" y="146" class="it">Node.js</text><text x="22" y="170" class="it">REST · Webhooks</text>
-  </g>
-  <g transform="translate(898 132)">
-    <use href="#card" width="270" height="214"/>
-    <text x="22" y="34" class="cod">AUG-04</text><text x="22" y="62" class="cat">LINK NEURAL</text>
-    <text x="22" y="98" class="it">LangGraph</text><text x="22" y="122" class="it">LangChain</text><text x="22" y="146" class="it">Claude</text><text x="22" y="170" class="it">MCP</text><text x="22" y="194" class="it">RAG</text>
+    <!-- Live Telemetry Tag Right -->
+    <circle cx="1104" cy="22" r="4.5" fill="#e5a93c" class="pulse-gold"/>
+    <text x="1092" y="26" text-anchor="end" class="font-mono badge-dx">STATUS: 100% SINCRONIZADO // ZERO REJEI&#199;&#195;O</text>
   </g>
 
-  <!-- linha 2 -->
-  <g transform="translate(40 364)">
-    <use href="#card" width="270" height="214"/>
-    <text x="22" y="34" class="cod">AUG-05</text><text x="22" y="62" class="cat">NUVEM</text>
-    <text x="22" y="98" class="it">Google Cloud</text><text x="22" y="122" class="it">Cloud Run · Cloud SQL</text><text x="22" y="146" class="it">IAM · IAP</text><text x="22" y="170" class="it">Oracle Cloud</text><text x="22" y="194" class="it">Docker · Nginx</text>
+  <line x1="44" y1="108" x2="1156" y2="108" stroke="#2a2318" stroke-width="1.2"/>
+
+  <!-- ROW 1 OF AUGMENTATION MODULES -->
+  <!-- AUG-01: Cognitive Core -->
+  <g transform="translate(44, 126)">
+    <use href="#dx-card" width="356" height="195"/>
+    <text x="24" y="32" class="font-mono aug-num">AUG-01 // COGNITIVE CORE</text>
+    <text x="24" y="54" class="font-cyber aug-cat">C&#211;RTEX NEURAL</text>
+    <text x="280" y="32" text-anchor="end" class="font-mono aug-status">SYNC_OK</text>
+
+    <text x="24" y="86" class="font-mono aug-item"><tspan fill="#e5a93c">&#9656;</tspan> LangGraph &#183; Multi-Agent Workflows</text>
+    <text x="24" y="110" class="font-mono aug-item"><tspan fill="#e5a93c">&#9656;</tspan> Claude MCP (Model Context Protocol)</text>
+    <text x="24" y="134" class="font-mono aug-item"><tspan fill="#e5a93c">&#9656;</tspan> Gemini 2.5 API &#183; RAG &amp; Embeddings</text>
+    <text x="24" y="158" class="font-mono aug-item"><tspan fill="#e5a93c">&#9656;</tspan> LangChain &#183; Fine-Grained Prompting</text>
   </g>
-  <g transform="translate(326 364)">
-    <use href="#card" width="270" height="214"/>
-    <text x="22" y="34" class="cod">AUG-06</text><text x="22" y="62" class="cat">MEMÓRIA</text>
-    <text x="22" y="98" class="it">PostgreSQL</text><text x="22" y="122" class="it">MySQL · MariaDB</text><text x="22" y="146" class="it">BigQuery</text><text x="22" y="170" class="it">n8n · Kestra</text>
+
+  <!-- AUG-02: Ocular Interface -->
+  <g transform="translate(422, 126)">
+    <use href="#dx-card" width="356" height="195"/>
+    <text x="24" y="32" class="font-mono aug-num">AUG-02 // OCULAR INTERFACE</text>
+    <text x="24" y="54" class="font-cyber aug-cat">&#211;PTICA REATIVA</text>
+    <text x="280" y="32" text-anchor="end" class="font-mono aug-status" fill="#61dafb">120Hz_HDR</text>
+
+    <text x="24" y="86" class="font-mono aug-item"><tspan fill="#00f0ff">&#9656;</tspan> React 19 &#183; Next.js 15 (App Router)</text>
+    <text x="24" y="110" class="font-mono aug-item"><tspan fill="#00f0ff">&#9656;</tspan> TypeScript 5 &#183; Tipagem Estrita</text>
+    <text x="24" y="134" class="font-mono aug-item"><tspan fill="#00f0ff">&#9656;</tspan> Three.js / WebGL &#183; Shaders &amp; Canvas</text>
+    <text x="24" y="158" class="font-mono aug-item"><tspan fill="#00f0ff">&#9656;</tspan> PixiJS (Lip-Sync) &#183; Tailwind / CSS Puro</text>
   </g>
-  <g transform="translate(612 364)">
-    <use href="#card" width="270" height="214"/>
-    <text x="22" y="34" class="cod">AUG-07</text><text x="22" y="62" class="cat">QUEBRA-GELO</text>
-    <text x="22" y="98" class="it">OWASP · WSTG</text><text x="22" y="122" class="it">Burp Suite · ZAP</text><text x="22" y="146" class="it">Metasploit</text><text x="22" y="170" class="it">Nmap · Wireshark</text>
+
+  <!-- AUG-03: Neural Spinal -->
+  <g transform="translate(800, 126)">
+    <use href="#dx-card" width="356" height="195"/>
+    <text x="24" y="32" class="font-mono aug-num">AUG-03 // NEURAL SPINAL</text>
+    <text x="24" y="54" class="font-cyber aug-cat">CONDUTO DORSAL</text>
+    <text x="280" y="32" text-anchor="end" class="font-mono aug-status" fill="#10b981">0ms_BUFFER</text>
+
+    <text x="24" y="86" class="font-mono aug-item"><tspan fill="#10b981">&#9656;</tspan> Python 3.12 &#183; FastAPI &#183; AsyncIO</text>
+    <text x="24" y="110" class="font-mono aug-item"><tspan fill="#10b981">&#9656;</tspan> SSE Streaming Real-Time (sem buffer)</text>
+    <text x="24" y="134" class="font-mono aug-item"><tspan fill="#10b981">&#9656;</tspan> Node.js &#183; Webhooks &#183; Proxy Reverso</text>
+    <text x="24" y="158" class="font-mono aug-item"><tspan fill="#10b981">&#9656;</tspan> Concurrency Limiting &amp; Resili&#234;ncia</text>
   </g>
-  <g transform="translate(898 364)">
-    <use href="#card" width="270" height="214"/>
-    <text x="22" y="34" class="cod">AUG-08</text><text x="22" y="62" class="cat">EXOESQUELETO</text>
-    <text x="22" y="98" class="it">Linux · Windows Server</text><text x="22" y="122" class="it">Proxmox · Zabbix</text><text x="22" y="146" class="it">OpenVPN · iptables</text><text x="22" y="170" class="it">PowerShell · Bash</text><text x="22" y="194" class="it">Git · CI/CD</text>
+
+  <!-- ROW 2 OF AUGMENTATION MODULES -->
+  <!-- AUG-04: Synaptic Memory -->
+  <g transform="translate(44, 342)">
+    <use href="#dx-card" width="356" height="195"/>
+    <text x="24" y="32" class="font-mono aug-num">AUG-04 // SYNAPTIC MEMORY</text>
+    <text x="24" y="54" class="font-cyber aug-cat">MATRIZ SIN&#193;PTICA</text>
+    <text x="280" y="32" text-anchor="end" class="font-mono aug-status">PERSIST_OK</text>
+
+    <text x="24" y="86" class="font-mono aug-item"><tspan fill="#e5a93c">&#9656;</tspan> Google BigQuery on-demand (DW)</text>
+    <text x="24" y="110" class="font-mono aug-item"><tspan fill="#e5a93c">&#9656;</tspan> PostgreSQL (pg-grom) &#183; MySQL</text>
+    <text x="24" y="134" class="font-mono aug-item"><tspan fill="#e5a93c">&#9656;</tspan> n8n Workflows Orquestrados (self-hosted)</text>
+    <text x="24" y="158" class="font-mono aug-item"><tspan fill="#e5a93c">&#9656;</tspan> Redis Cache &#183; Modelos Vetoriais</text>
   </g>
+
+  <!-- AUG-05: Cloud Exoskeleton -->
+  <g transform="translate(422, 342)">
+    <use href="#dx-card" width="356" height="195"/>
+    <text x="24" y="32" class="font-mono aug-num">AUG-05 // CLOUD EXOSKELETON</text>
+    <text x="24" y="54" class="font-cyber aug-cat">EXOMALHA NUVEM</text>
+    <text x="280" y="32" text-anchor="end" class="font-mono aug-status" fill="#a855f7">AUTO_SCALE</text>
+
+    <text x="24" y="86" class="font-mono aug-item"><tspan fill="#a855f7">&#9656;</tspan> Google Cloud Run (Serverless Multi-Stage)</text>
+    <text x="24" y="110" class="font-mono aug-item"><tspan fill="#a855f7">&#9656;</tspan> Docker Alpine &#183; Nginx Hardening</text>
+    <text x="24" y="134" class="font-mono aug-item"><tspan fill="#a855f7">&#9656;</tspan> GCP Secret Manager &#183; IAM Least Priv.</text>
+    <text x="24" y="158" class="font-mono aug-item"><tspan fill="#a855f7">&#9656;</tspan> CI/CD Automatizado &#183; Linux &amp; PowerShell</text>
+  </g>
+
+  <!-- AUG-06: Security & Protocol -->
+  <g transform="translate(800, 342)">
+    <use href="#dx-card" width="356" height="195"/>
+    <text x="24" y="32" class="font-mono aug-num">AUG-06 // SECURITY PROTOCOL</text>
+    <text x="24" y="54" class="font-cyber aug-cat">QUEBRA &amp; CIFRA</text>
+    <text x="280" y="32" text-anchor="end" class="font-mono aug-status" fill="#ef4444">ZERO_TRUST</text>
+
+    <text x="24" y="86" class="font-mono aug-item"><tspan fill="#ef4444">&#9656;</tspan> Google Workspace OAuth2 &amp; SSO por Grupo</text>
+    <text x="24" y="110" class="font-mono aug-item"><tspan fill="#ef4444">&#9656;</tspan> CSP com Nonce per-request &amp; HSTS</text>
+    <text x="24" y="134" class="font-mono aug-item"><tspan fill="#ef4444">&#9656;</tspan> HMAC-SHA256 Sess&#245;es HTTP-only</text>
+    <text x="24" y="158" class="font-mono aug-item"><tspan fill="#ef4444">&#9656;</tspan> OWASP Top 10 &#183; Defesa contra Inje&#231;&#227;o</text>
+  </g>
+
+  <!-- Footer quote inside Deus Ex card -->
+  <text x="600" y="558" text-anchor="middle" class="font-mono sub-dx" fill="#64748b">SARIF INDUSTRIES // "O FUTURO N&#195;O &#201; ALGO QUE ESPERAMOS. &#201; ALGO QUE CONSTRU&#205;MOS."</text>
 </svg>
