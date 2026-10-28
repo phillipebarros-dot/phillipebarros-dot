@@ -5,5 +5,5 @@
 </p>
 
 <p align="center">
-  <img src="https://media.giphy.com/media/3o7TKTDn976rzVgky4/giphy.gif" width="500" alt="Xenomorph" />
+  <img src="https://media.tenor.com/5iorLqvthx0AAAAM/xenomorph-alien.gif" width="500" alt="Xenomorph" />
 </p>
