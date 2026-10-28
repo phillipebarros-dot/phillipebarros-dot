@@ -2,7 +2,7 @@
   <defs>
     <style>
       /*FONTS*/
-      .nome{font-family:'CP';font-size:82px;letter-spacing:5px}
+      .nome{font-family:'CP';font-size:110px;letter-spacing:8px}
       .m{font-family:'STM',Consolas,monospace}
       .mx{font-family:'STM',Consolas,monospace;font-size:14px;fill:#00ff41}
 
@@ -106,9 +106,9 @@
 
     <!-- Reusable name group -->
     <g id="nfull">
-      <text class="nome g-cyan" fill="#00f0ff" filter="url(#gl)">PHILLIPE BARROS</text>
-      <text class="nome g-pink" fill="#ff0055" filter="url(#gl)">PHILLIPE BARROS</text>
-      <text class="nome" fill="#e0ffe0">PHILLIPE BARROS</text>
+      <text class="nome g-cyan" fill="#00f0ff" filter="url(#gl)">PHILLIPE</text>
+      <text class="nome g-pink" fill="#ff0055" filter="url(#gl)">PHILLIPE</text>
+      <text class="nome" fill="#e0ffe0">PHILLIPE</text>
     </g>
   </defs>
 
